@@ -1,22 +1,21 @@
 #include "monty.h"
 
+/**
+ * main - The Monty Code
+ *
+ * @argc: The number of arguments
+ * @argv: The argument vector
+ *
+ * Return: 0
+ */
 int main(int argc, char **argv)
 {
-	instruction_t ops[] = {
-		{"u", push},
-		{"a", pall},
-		{"i", pint},
-		{"o", pop},
-		{"w", swap},
-		{"d", add},
-		{"n", nop),
-	};
-
+	FILE *fp;
 	stack_t *stack = NULL;
-	FILE *fp = NULL;
-	char *s, *n, *o = NULL;
-	int bufsize = 2048, line = 1;
-	char buffer[bufsize];
+	ssize_t read;
+	size_t len = 0;
+	char *opcode, *line = NULL;
+	unsigned int line_number = 1;
 
 	if (argc != 2)
 	{
@@ -32,22 +31,23 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	s = fgets(buffer, bufsize, fp);
+	read = getline(&line, &len, fp);
 
-	while (s != NULL)
+	while (read != -1)
 	{
-		n = string_trim(s);
-		if (n != NULL)
+		opcode = strtok(line, " \t\r\n'$'");
+		if (opcode == NULL)
 		{
-			o = remove_excess_internal_spaces(n);
-			free(n);
-			run_cmd(fp, line, o, ops, &stack);
-			free(o);
+			line_number = line_number + 1;
+			read = getline(&line, &len, fp);
+			continue;
 		}
-		s = fgets(buffer, bufsize, fp);
-		line = line + 1;
+		run_command(opcode, &stack, line_number);
+		read = getline(&line, &len, fp);
+		line_number = line_number + 1;
 	}
-	free_list(stack);
+	free(line);
+	free_stack(stack);
 	fclose(fp);
-	return (0);
+	return (EXIT_SUCCESS);
 }
