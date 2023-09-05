@@ -1,7 +1,8 @@
 #include "monty.h"
 
 /**
- * popping - Removes the top element of the stack...or pop pop, pop you want it?
+ * popping - Removes the top element of the stack...or pop 
+ * pop, pop you want it?
  *
  * @stack: The stack
  * @line_number: Line number of current command
