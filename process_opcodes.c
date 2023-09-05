@@ -15,6 +15,7 @@ void run_command(char *opcode, stack_t **stack, unsigned int line_number)
 	instruction_t instructions[] = {
 		{"push", pushing},
 		{"pall", palling},
+		{"pint", pinting},
 		{NULL, NULL}
 	};
 
