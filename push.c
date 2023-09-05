@@ -21,7 +21,6 @@ void pushing(stack_t **stack, unsigned int line_number)
 	}
 
 	token = strtok(NULL, " \t\r\n'$'");
-
 	if (token == NULL)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
@@ -29,7 +28,6 @@ void pushing(stack_t **stack, unsigned int line_number)
 	}
 
 	value = atoi(token);
-
 	if (strspn(token, "0123456789+-") != strlen(token))
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
@@ -37,7 +35,6 @@ void pushing(stack_t **stack, unsigned int line_number)
 	}
 
 	NewNode = malloc(sizeof(stack_t));
-
 	if (NewNode == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
@@ -47,7 +44,6 @@ void pushing(stack_t **stack, unsigned int line_number)
 	NewNode->n = value;
 	NewNode->prev = NULL;
 	NewNode->next = *stack;
-
 	if (*stack != NULL)
 	{
 		(*stack)->prev = NewNode;
