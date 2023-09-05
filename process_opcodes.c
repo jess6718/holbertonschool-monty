@@ -18,6 +18,8 @@ void run_command(char *opcode, stack_t **stack, unsigned int line_number)
 		{"pint", pinting},
 		{"pop", popping},
 		{"swap", swapping},
+		{"add", adding},
+		{"nop", nopping},
 		{NULL, NULL}
 	};
 
