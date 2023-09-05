@@ -1,6 +1,14 @@
 #include "monty.h"
 
-void (*process_op(char *op))(stack_t **, unsigned int)
+/**
+ * process_op - Matches user input command with system command
+ *
+ * @stack: The stack heap
+ * @line_numebr: The number being adding onto the stack
+ *
+ * Return: void
+ */
+void (*process_op(char *op))(stack_t **stack, unsigned int line_number)
 {
         int i = 0;
         instruction_t op_ins[] = {
