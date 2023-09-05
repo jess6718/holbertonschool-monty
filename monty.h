@@ -45,6 +45,9 @@ void pushing(stack_t **stack, unsigned int line_number);
 void palling(stack_t **stack, __attribute__((unused)) unsigned int line_number);
 void pinting(stack_t **stack, unsigned int line_number);
 void popping(stack_t **stack, unsigned int line_number);
+void swapping(stack_t **stack, unsigned int line_number);
+
+size_t stack_length(stack_t *head);
 
 void free_stack(stack_t *stack);
 
