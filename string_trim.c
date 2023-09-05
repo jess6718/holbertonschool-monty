@@ -115,6 +115,7 @@ char *remove_excess_internal_spaces(char *str)
 	o[j] = '\0';
 	return (o);
 }
+
 /**
  * count_valid_cmd_chars - Counts the number of characters in the valid command
  *
