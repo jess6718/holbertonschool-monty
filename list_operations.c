@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * free_list - Frees the list
+ * free_stack - Frees the list
  *
- * @head: List to be freed
+ * @stack: Stack to be freed
  *
  * Return: Void
  */
