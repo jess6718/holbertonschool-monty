@@ -16,6 +16,7 @@ void run_command(char *opcode, stack_t **stack, unsigned int line_number)
 		{"push", pushing},
 		{"pall", palling},
 		{"pint", pinting},
+		{"pop", popping},
 		{NULL, NULL}
 	};
 
