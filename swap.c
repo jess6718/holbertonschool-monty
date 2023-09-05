@@ -15,7 +15,7 @@ void swapping(stack_t **stack, unsigned int line_number)
 	size_t length;
 	unsigned int i;
 
-	i = line_number
+	i = line_number;
 
 	length = stack_length(*stack);
 
