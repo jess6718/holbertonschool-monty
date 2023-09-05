@@ -41,8 +41,9 @@ typedef struct instruction_s
 
 void run_command(char *opcode, stack_t **stack, unsigned int line_number);
 
-void pushing(stack_t **head, unsigned int line_number);
+void pushing(stack_t **stack, unsigned int line_number);
 void palling(stack_t **stack, __attribute__((unused)) unsigned int line_number);
+void pinting(stack_t **stack, unsigned int line_number);
 
 void free_stack(stack_t *stack);
 
