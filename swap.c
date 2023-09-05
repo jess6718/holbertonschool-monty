@@ -13,13 +13,15 @@ void swapping(stack_t **stack, unsigned int line_number)
 	int temp;
 	stack_t *head;
 	size_t length;
+	unsigned int i;
+
+	i = line_number
 
 	length = stack_length(*stack);
 
 	if (length < 2)
 	{
-		fprintf(stderr, "L%u: can't swap", line_number);
-		fprintf(stderr, ", stack too short");
+		fprintf(stderr, "L%u: can't swap, stack too short\n", i);
 		exit(EXIT_FAILURE);
 	}
 
