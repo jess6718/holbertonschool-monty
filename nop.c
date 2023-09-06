@@ -5,8 +5,8 @@
  * @line_number: line numver of the line read
  * Return: void
  */
-void nopping(__attribute__((unused))stack_t **stack, 
+void nopping(__attribute__((unused))stack_t **stack,
 	__attribute__((unused))unsigned int line_number)
 {
-	return;
+	;
 }
