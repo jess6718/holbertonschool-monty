@@ -20,6 +20,7 @@ void run_command(char *opcode, stack_t **stack, unsigned int line_number)
 		{"swap", swapping},
 		{"add", adding},
 		{"nop", nopping},
+		{"sub", subbing},
 		{NULL, NULL}
 	};
 
