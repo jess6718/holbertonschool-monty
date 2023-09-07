@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * subbing - subtractss top two nodes of the stack, store the total value
- * to second node and removes the top node
+ * subbing - subtractss top two nodes of the stack, store the total
+ * value to second node and removes the top node
  *
  * @stack: pointer to pointer to top of the stack
  *
