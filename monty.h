@@ -48,6 +48,7 @@ void popping(stack_t **stack, unsigned int line_number);
 void swapping(stack_t **stack, unsigned int line_number);
 void adding(stack_t **stack, unsigned int line_number);
 void nopping(__attribute__((unused))stack_t **stack, __attribute__((unused))unsigned int line_number);
+void subbing(stack_t **stack, unsigned int line_number);
 
 size_t stack_length(stack_t *head);
 
