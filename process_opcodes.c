@@ -35,6 +35,7 @@ void run_command(char *opcode, stack_t **stack, unsigned int line_number)
 		}
 		i = i + 1;
 	}
+
 	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 	exit(EXIT_FAILURE);
 }
